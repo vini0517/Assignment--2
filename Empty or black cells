@@ -1,0 +1,61 @@
+/*Finding empty or black cell from the array*/
+
+#include <stdio.h>
+
+int main()
+{
+   //declaring variables
+   int r,c,i,j;
+   //getting no.of rows and columns from user
+    printf("number of row:");
+    scanf("%d",&r);
+    printf("number of column:");
+    scanf("%d",&c);
+    //declaring rows and columns in 2D array
+    int a[r][c];
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+    //counting no. of empty or black cells
+    int s=0,count,count1=1;
+    for(int v=0;v<r;v++)
+    {
+    for(s=0;s<c;s++)
+    
+    {
+        for(i=0;i<r;i++)
+        {
+            for(j=0;j<c;j++)
+            {
+                if(a[v][s]==a[i][j])
+                {
+                    count = a[i][j];
+                    count1=count1+1;
+                }
+            }
+        }
+    }
+    }
+    //printing the count value
+    printf("No. of black cells %d %d",count,count1);
+    return 0;
+}
+
+
+/*Thus the program to finding number of black or empty cells is executed successfully.
+How this program works:
+1)First we are getting no. of rows and columns from user
+2)Then we are declaring it using 2D array and getting values from user
+3)Now we are using for loop and if condition clause to count the no. of empty or black cells*/ 
