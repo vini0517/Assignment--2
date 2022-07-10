@@ -1,2 +1,2 @@
 # Assignment--2
-count empty or black cell
+To find empty or black cell from the array
